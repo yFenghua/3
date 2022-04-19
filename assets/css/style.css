@@ -1,0 +1,150 @@
+* {
+    margin: 0;/*外边距*/
+    padding: 0;/*内边距*/
+}
+
+.swithDivContain{
+    width: 100vw;/*宽度*/
+    height: 100vh;/*高度*/
+    overflow: hidden;/*隐藏溢出部分*/
+}
+
+/*上半页*/
+.indexImg{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/Top.jpg);/*背景图片*/
+    background-repeat: no-repeat;/*背景图片不重复*/
+    background-size: cover;/*背景填充*/
+    background-position: center center;/*居中*/
+    transition: all 1s;/*页面之间的平滑过渡*/
+}
+
+.indexImgMoveup{
+
+    transform: translateY(-100vh);/*向下移动100vh*/
+}
+
+@keyframes maskShow {
+    from {
+        background-color: rgba(0, 0, 0, 0);/*rgba颜色*/
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .5);/*rgba颜色*/
+    }
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: maskShow 1s ease-out 1s forwards;/*旋转*/
+}
+
+.title {
+    color: #fff;/*颜色*/
+    font-size: .9vw;/*字体大小*/
+    position: absolute;
+    top: 50vh;
+    opacity: 0;
+}
+
+@keyframes titleShow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.title1 {
+    left: 44vw;
+    animation: titleShow .5s ease-out 2s forwards;
+}
+
+.title2 {
+    top: 55vh;
+    left: 50vw;
+    animation: titleShow .5s ease-out 3s forwards;
+}
+
+.title3 {
+    top: 60vh;
+    left: 60vw;
+    animation: titleShow .5s ease-out 4s forwards;
+}
+
+@keyframes breath{
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.seeMore {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 5vh;
+    color: #fff;
+    animation: breath 2s ease-in-out infinite;
+}
+
+/*下半页*/
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.headImg {
+    width: 8vw;
+    height: 8vw;
+    border: solid .5vw #fff;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(185, 185, 185);
+    background-image: url(../img/yaomeng.bmp);
+    background-size: contain;
+    animation: rotate360 10s linear infinite;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.showMe {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+}
+
+.showMe p {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.rockroll {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.rockroll a{
+    color: rgb(160, 160, 160);
+}
+
+.showMeMoveup {
+    transform: translateY(-100vh);
+}
