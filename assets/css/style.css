@@ -44,7 +44,7 @@
 
 .title {
     color: #fff;/*颜色*/
-    font-size: .9vw;/*字体大小*/
+    font-size: .14vw;/*字体大小*/
     position: absolute;
     top: 50vh;
     opacity: 0;
@@ -61,19 +61,23 @@
 }
 
 .title1 {
-    left: 44vw;
+    top: 15vw;
+    left: 25vw;
+    font-size: 2vw;
     animation: titleShow .5s ease-out 2s forwards;
 }
 
 .title2 {
-    top: 55vh;
-    left: 50vw;
+    top: 35vh;
+    left: 35vw;
+    font-size: 2vw;
     animation: titleShow .5s ease-out 3s forwards;
 }
 
 .title3 {
-    top: 60vh;
-    left: 60vw;
+    top: 50vh;
+    left: 50vw;
+    font-size: 2vw;
     animation: titleShow .5s ease-out 4s forwards;
 }
 
